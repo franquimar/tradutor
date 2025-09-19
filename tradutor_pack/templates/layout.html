@@ -1,0 +1,19 @@
+
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <title>Chrono Translator Pro</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav>
+        <a href="{{ url_for('home') }}">Início</a>
+        <a href="{{ url_for('buy') }}">Comprar</a>
+        <a href="{{ url_for('download') }}">Download</a>
+        <a href="{{ url_for('support') }}">Suporte</a>
+        <a href="{{ url_for('profile') }}">Perfil</a>
+    </nav>
+    {% block content %}{% endblock %}
+</body>
+</html>
