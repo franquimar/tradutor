@@ -1,0 +1,13 @@
+
+{% extends 'layout.html' %}
+{% block content %}
+<div class="card">
+    <h2>Licença Gerada</h2>
+    {% if license_key %}
+    <p>Sua chave: {{ license_key }}</p>
+    <audio src="{{ url_for('static', filename='success.wav') }}" autoplay></audio>
+    {% else %}
+    <p>Pagamento pendente.</p>
+    {% endif %}
+</div>
+{% endblock %}

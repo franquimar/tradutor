@@ -1,0 +1,16 @@
+
+{% extends 'layout.html' %}
+{% block content %}
+<div class="card">
+    <h2>Meu Perfil</h2>
+    <p>Nome: {{ user['username'] }}</p>
+    <p>Email: {{ user['email'] }}</p>
+    <p>País: {{ user['country'] }}</p>
+    <h3>Minhas Licenças</h3>
+    <ul>
+        {% for l in licenses %}
+        <li>{{ l['license_key'] }} - {{ 'Ativa' if l['active']==1 else 'Inativa' }}</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
